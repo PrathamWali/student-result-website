@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+@theme inline {
+  --color-gov-blue: #003580;
+  --color-gov-blue-light: #0056b3;
+  --color-gov-blue-dark: #002060;
+  --color-table-header: #1a3a6b;
+  --color-table-row-alt: #dce6f1;
+  --color-table-border: #4472c4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f0f4f8;
+}
+
+.result-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.result-table th {
+  background-color: #1a3a6b;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #4472c4;
+  text-align: center;
+}
+
+.result-table td {
+  padding: 5px 10px;
+  font-size: 12px;
+  border: 1px solid #4472c4;
+  text-align: center;
+}
+
+.result-table tr:nth-child(odd) td {
+  background-color: #dce6f1;
+}
+
+.result-table tr:nth-child(even) td {
+  background-color: #ffffff;
+}
+
+.result-table tr:hover td {
+  background-color: #b8cce4;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .print-container {
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+}
