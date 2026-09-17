@@ -1,0 +1,10 @@
+{
+  "description": "Securely access student academic results with detailed info, grades, and promotion status, featuring official Karnataka University branding and print options.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
