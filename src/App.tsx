@@ -50,8 +50,7 @@ async function readApiResponse<T>(res: Response): Promise<T> {
 // In development, an empty base uses Vite's /api proxy.
 // In production, VITE_API_URL points to the deployed backend (for example,
 // https://your-backend.onrender.com).
-const API_BASE_URL = (import.meta.env.VITE_API_URL || "").replace(/\\/+$/, "");
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "";
 async function apiLogin(usn: string, password: string): Promise<{ token: string; usn: string; name: string }> {
   let res: Response;
   try {
